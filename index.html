@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Strat-LLM: Stratified Strategy Alignment for LLM-based Stock Trading with Real-time Multimodal Signals.">
+  <meta property="og:title" content="Strat-LLM: Stratified Strategy Alignment for Stock Trading"/>
+  <meta property="og:description" content="Introducing Strat-LLM, a framework grounded in Stratified Strategy Alignment for financial LLMs."/>
+  <meta property="og:url" content="https://Strat-LLM.github.io"/>
+  <meta property="og:image" content="static/images/1.jpg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="Strat-LLM: Stratified Strategy Alignment for Stock Trading">
+  <meta name="twitter:description" content="Introducing Strat-LLM: A new framework for aligning financial LLMs with strategic constraints.">
+  <meta name="twitter:image" content="static/images/1.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Large Language Models, Financial LLM, Stratified Strategy Alignment, Quantitative Trading, Stock Market">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Strat-LLM: Stratified Strategy Alignment for Financial LLMs</title>
+  
+  <link rel="icon" type="image/png" href="static/images/paper_logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Strat-LLM: Stratified Strategy Alignment for <br> LLM-based Stock Trading with Real-time Multimodal Signals</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous IJCNN Submission
+            </span>
+          </div>
+          
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://github.com/Strat-LLM/Strat-LLM-Supplementary-Material" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code & Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      
+      <div class="has-text-centered" style="margin-bottom: 2rem;">
+         <img src="static/images/paper_logo.png" 
+              alt="Strat-LLM Logo" 
+              style="background-color: white;  
+                     border-radius: 20px;       
+                     padding: 15px;           
+                     box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+                     width: 140px;             
+                     height: 140px;           
+                     object-fit: contain;">
+      </div>
+      
+      <div class="container is-max-desktop" style="margin: 2rem auto;">
+        <div class="notification is-info is-light">
+          <p class="title is-4 has-text-centered">TL;DR</p>
+          <div class="content has-text-centered" style="font-size: 1.1rem; line-height: 1.6;">
+            <p>
+              <strong>Strat-LLM</strong> investigates the <strong>reliability boundaries</strong> of Large Language Models in dynamic, <strong>multimodal</strong> decision-making environments. Validated through a <strong>live-forward 2025 framework</strong> to preclude data leakage, it employs <strong>Stratified Strategy Alignment</strong> to modulate model autonomy. The study uncovers a fundamental tension: while strict alignment enhances <strong>robustness against hallucinations</strong> in efficient markets, it may constrain adaptability in inefficient ones, offering key insights for deploying <strong>dependable agents</strong> in high-stakes scenarios.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Language Models (LLMs) are rapidly evolving into autonomous trading agents capable of complex decision-making; however, existing benchmarks often overlook strategy consistency and decision transparency. To address this, we propose <strong>Strat-LLM</strong>, a framework grounded in Stratified Strategy Alignment. Distinct from retrospective backtesting, our framework operates in a live-forward setting throughout the 2025 experimental window, integrating sequential numerical market streams with a static library of textual annual report summaries. This setup strictly mimics the chronological flow of information to eliminate look-ahead bias. By auditing decision rationales and confidence scores across Free, Guided, and Strict autonomy modes, our extensive stress tests on A-share and U.S. markets reveal critical insights: (1) Strategic constraints act as a double-edged sword: while they induce an "Alignment Tax" in inefficient markets (A-share) by limiting upside potential, they provide essential robustness in efficient markets (U.S.). (2) LLMs exhibit "Cognitive Dissonance" under strict constraints, evidenced by a surge in confidence volatility. (3) Performance is intrinsically linked to Market Efficiency. (4) Capability scales nonlinearly, with intermediate-scale models achieving the optimal balance between cost and performance.
+          </p>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <div class="item">
+          <img src="static/images/1.png" alt="Framework Architecture" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            The Proposed Multimodal Agent Framework
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/2.png" alt="Cross-Market Migration" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Cross-Market Strategy Migration (US vs. A-share)
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/3.png" alt="Strategic Mimicry" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Strategic Mimicry and Alpha Collapse
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/4.png" alt="Narrative Overfitting" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Confidence Calibration and Narrative Overfitting
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/5.png" alt="Scaling Laws" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Scaling Laws of Excess Return
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/6.png" alt="Temporal Confidence" style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Temporal Confidence Dynamics
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{stratllm2026,
+  title     = {Strat-LLM: Stratified Strategy Alignment for LLM-based Stock Trading with Real-time Multimodal Signals},
+  author    = {Anonymous},
+  booktitle = {International Joint Conference on Neural Networks (IJCNN)},
+  year      = {2026}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
