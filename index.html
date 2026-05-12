@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="RISCTrade: A Dynamic Multi-Market Benchmark for Risk-Mandate Compliance of Large Language Models in Closed-Loop Trading.">
+  <meta property="og:title" content="RISCTrade: Risk-Mandate Compliance Benchmark for LLMs in Closed-Loop Trading"/>
+  <meta property="og:description" content="RISCTrade evaluates LLM-based financial agents across A-share, Hong Kong, and U.S. equity markets with Risk Attitude Scaffolding."/>
+  <meta property="og:url" content="https://RISCTrade.github.io"/>
+  <meta property="og:image" content="static/images/framework.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+  <meta name="twitter:title" content="RISCTrade: Risk-Mandate Compliance Benchmark for LLMs in Closed-Loop Trading">
+  <meta name="twitter:description" content="RISCTrade: A dynamic multi-market benchmark for auditing risk-instruction and strategy-compliance of LLMs in closed-loop trading.">
+  <meta name="twitter:image" content="static/images/framework.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="keywords" content="Large Language Models, Financial Benchmark, Closed-Loop Trading, Risk Mandate Compliance, Sequential Decision-Making">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RISCTrade: A Dynamic Multi-Market Benchmark for LLMs in Closed-Loop Trading</title>
+
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RISCTrade: A Dynamic Multi-Market Benchmark for Risk-Mandate Compliance of Large Language Models in Closed-Loop Trading</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Wenliang Huang<sup>1</sup>,&nbsp;</span>
+            <span class="author-block">Junkai Li<sup>1</sup>,&nbsp;</span>
+            <span class="author-block">Zengyi Yu<sup>2</sup>,&nbsp;</span>
+            <span class="author-block">
+              <a href="mailto:xjkong@ieee.org">Xiangjie Kong</a><sup>1*</sup>
+            </span>
+          </div>
+
+          <div class="is-size-6 publication-authors" style="margin-top: 0.5rem;">
+            <span class="author-block"><sup>1</sup>Zhejiang University of Technology, Hangzhou, China&nbsp;&nbsp;&nbsp;</span>
+            <span class="author-block"><sup>2</sup>East China Normal University, Shanghai, China</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://github.com/LJK666666666/Q_dynastock" target="_blank"
+                class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code &amp; Dataset</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+
+<div class="container is-max-desktop" style="margin: 2rem auto;">
+        <div class="notification is-info is-light">
+          <p class="title is-4 has-text-centered">TL;DR</p>
+          <div class="content has-text-centered" style="font-size: 1.1rem; line-height: 1.6;">
+            <p>
+              <strong>RISCTrade</strong> is a dynamic multi-market benchmark that evaluates LLMs as <strong>closed-loop trading agents</strong> across A-share, Hong Kong, and U.S. equity markets. It introduces <strong>Risk Attitude Scaffolding</strong> to audit whether models comply with Aggressive, Neutral, and Conservative mandates under realistic broker-enforced execution constraints. Key findings: current LLM agents show <strong>asymmetric capabilities</strong>&mdash;struggling to capture bull-market upside, yet demonstrating notable <strong>downside protection</strong> during market downturns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current evaluation paradigms for Large Language Models (LLMs) in the financial sector rely heavily on static question-answering datasets and frequently neglect real-world market frictions, such as minimum trading lot sizes, capital constraints, settlement rules, and transaction costs. These limitations make existing evaluations inadequate for assessing a model's adaptive capabilities in authentic, continuous trading environments. To address this gap, we propose <strong>RISCTrade</strong>, a dynamic multi-market benchmark designed to audit the <strong>R</strong>isk-<strong>I</strong>nstruction and <strong>S</strong>trategy-<strong>C</strong>ompliance capabilities of LLMs in closed-loop trading. RISCTrade is grounded in multi-source heterogeneous financial data and covers three major global markets: A-share, Hong Kong, and U.S. equities. It employs continuous sliding-window evaluation to mitigate data contamination risks and incorporates broker-enforced execution constraints to ensure realistic portfolio updates. A central component of RISCTrade is the <strong>Risk Attitude Scaffolding</strong> mechanism, which requires models to explicitly align their trading decisions with specified risk profiles, including Aggressive, Neutral, and Conservative mandates. Based on an extensive evaluation of several state-of-the-art LLMs, our empirical results reveal three key insights: (1) models exhibit significant asymmetry in trend adaptation&mdash;struggling in bull markets while demonstrating notable loss mitigation during drawdowns; (2) LLMs can display monotonic risk-mandate compliance in specific markets, though profitability remains regime-dependent; (3) regional models demonstrate distinct competitive advantages in their corresponding local markets. Overall, RISCTrade shifts financial LLM evaluation from static prediction toward dynamic, risk-aware, and compliance-oriented assessment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <img src="static/images/framework.png" alt="RISCTrade Pipeline"
+               style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Pipeline of RISCTrade: Multi-source Financial Data, Closed-Loop Simulation, Strategy Scaffolding, and Risk Attitude Scaffolding
+          </h2>
+        </div>
+
+        <div class="item">
+          <img src="static/images/fig_attitude.png" alt="Risk Attitude Compliance"
+               style="max-height: 600px; width: 100%; object-fit: contain; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle has-text-centered has-text-weight-bold" style="margin-top: 15px; font-size: 1.2rem;">
+            Risk Attitude Compliance: Monotonic Compliance in A-share vs. Non-monotonic Patterns in U.S. Market (Minimax-m2.5, Guided Mode)
+          </h2>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Findings</h2>
+    <div class="columns is-multiline">
+
+      <div class="column is-one-third">
+        <div class="box" style="height: 100%;">
+          <h3 class="title is-5">Asymmetric Market Capabilities</h3>
+          <p>LLM agents struggle to capture excess returns in strong bull markets (all models underperform buy-and-hold in A-share), but demonstrate notable value in downside protection during declines (DeepSeek V3.2 achieves &minus;5.18% vs. benchmark &minus;9.39% in the U.S. market).</p>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="box" style="height: 100%;">
+          <h3 class="title is-5">Risk-Mandate Compliance</h3>
+          <p>In the A-share market, Minimax-m2.5 shows clear monotonic compliance: total return decreases from 28.10% (Aggressive) to 19.49% (Neutral) to 13.96% (Conservative), with maximum drawdown also decreasing monotonically. Compliance patterns are more nuanced in the U.S. market.</p>
+        </div>
+      </div>
+
+      <div class="column is-one-third">
+        <div class="box" style="height: 100%;">
+          <h3 class="title is-5">Regional Model Advantage</h3>
+          <p>Chinese-developed models (Kimi-k2.5, GLM-5, Minimax-m2.5) show competitive performance in the A-share market, suggesting stronger familiarity with local market conventions. Model performance is not simply correlated with model scale or proprietary status.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{risctrade2025,
+  title   = {RISCTrade: A Dynamic Multi-Market Benchmark for Risk-Mandate Compliance
+             of Large Language Models in Closed-Loop Trading},
+  author  = {Huang, Wenliang and Li, Junkai and Yu, Zengyi and Kong, Xiangjie},
+  year    = {2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
